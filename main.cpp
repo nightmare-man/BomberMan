@@ -1,10 +1,13 @@
 ﻿#include "GameLib/Framework.h"
 using namespace GameLib;
-#include "image.h"
-Image* image;
+#include "Sequence/parent.h"
+using namespace std;
+using namespace Sequence;
+Parent* p;
+bool win = false;
 void Framework::update() {
-	if (!image) {
-		image = new Image("bar.dds");
+	if (!p) {
+		p = new Parent();
 	}
-	image->Draw();
+	p->update();
 }

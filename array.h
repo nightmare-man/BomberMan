@@ -6,15 +6,19 @@ public:
 
 	}
 	~Array2D() {
-		SAFE_DELETE(mData);
+		delete[] mData;
 	}
 	void setSize(int x, int y) {
 		mWidth = x;
 		mHeight = y;
 		mData = new T[mWidth * mHeight];
 	}
-	void Width();
-	void Height();
+	void Width() {
+		return mWidth;
+	}
+	void Height() {
+		return mHeight;
+	}
 	T& operator()(int x, int y) {
 		return mData[y * mWidth + x];
 	}

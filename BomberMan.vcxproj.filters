@@ -33,6 +33,24 @@
     <ClInclude Include="array.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="state.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\parent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\title.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\end.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\pass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\game\game_parent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BomberMan.rc">
@@ -55,6 +73,24 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="image.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="state.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\parent.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\title.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\pass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\end.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\game\game_parent.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

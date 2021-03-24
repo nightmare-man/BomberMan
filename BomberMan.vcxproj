@@ -120,10 +120,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);C:\Users\lsm\Desktop\GameLib.2017\GameLib\2DActionGame\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\lsm\Desktop\GameLib.2017\GameLib\2DActionGame\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GameLib_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -148,12 +152,24 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="image.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="Sequence\end.h" />
+    <ClInclude Include="Sequence\game\game_parent.h" />
+    <ClInclude Include="Sequence\parent.h" />
+    <ClInclude Include="Sequence\pass.h" />
+    <ClInclude Include="Sequence\title.h" />
+    <ClInclude Include="state.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="file.cpp" />
     <ClCompile Include="image.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Sequence\end.cpp" />
+    <ClCompile Include="Sequence\game\game_parent.cpp" />
+    <ClCompile Include="Sequence\parent.cpp" />
+    <ClCompile Include="Sequence\pass.cpp" />
+    <ClCompile Include="Sequence\title.cpp" />
+    <ClCompile Include="state.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BomberMan.rc" />
