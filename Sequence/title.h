@@ -1,6 +1,7 @@
 #pragma once
 class Image;
 namespace Sequence {
+
 	class Parent;
 	class Title {
 	public:
@@ -9,5 +10,6 @@ namespace Sequence {
 		void update(Parent*);
 	private:
 		Image* image;
+		int selected;
 	};
 }

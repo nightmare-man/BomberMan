@@ -31,7 +31,7 @@ namespace {
 		return (dstR & 0x00ff0000) | (dstG & 0xff00) | dstB;
 	}
 }
-void Image::Draw(int dstx,int dsty,int srcx,int srcy,int width,int height) {
+void Image::Draw(int dstx,int dsty,int srcx,int srcy,int width,int height) const{
 	if (!width || !height) {
 		width = mWidth;
 		height = mHeight;

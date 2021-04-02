@@ -1,22 +1,19 @@
 #pragma once
 #include "array.h"
 class Image;
+class StaticObject;
 class State {
 public:
-	State(const char* stageData,int size);
+	static const int STAGE_ID_2PLAYS = 0;
+	State(int stageID);
 	~State();
-	void setSize();
-	void update(int x,int y,int dt);
-	void draw();
-	bool hasClear();
-	void reset();
+	void update();//输入及更新
+	void draw()const;//绘制
+	bool hasClear()const;//检测是不是赢了
+	bool isAlive1P()const;
+	bool isAlive2P()const;
 private:
-	class Object;
-	int mWidth;
-	int mHeight;
-	char* mStageData;
-	Array2D<Object> mdata;
-	Image* image;
-	int moveCount;
-	static const int MAX_MOVE_COUNT = 300;//移动一格的时间
+	Array2D<StaticObject> mStageObjects;
+	Image* image;//图片
+	int mStageID;
 };

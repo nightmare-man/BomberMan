@@ -4,15 +4,31 @@
 #include "Sequence/title.h"
 #include "Sequence/game/game_parent.h"
 #include "GameLib/Framework.h"
-#include <sstream>
 using namespace std;
 using namespace GameLib;
 namespace Sequence {
+	Parent* Parent::mInstance = 0;
+	void Parent::create() {
+		ASSERT(!mInstance && "不能连续调用create()");
+		mInstance = new Parent();
+	}
+	void Parent::destroy() {
+		SAFE_DELETE(mInstance);
+	}
+	Parent* Parent::instance() {
+		return mInstance;
+	}
 	Parent::Parent():mTitle(0),mEnd(0),mPass(0),
-		mGame(0),mNext(SEQ_NONE),gCount(0) {
+		mGame(0),mNext(SEQ_NONE),mMode(M_1P) {
 		Framework f = Framework::instance();
 		f.setFrameRate(60);
 		mTitle = new Title();
+	}
+	void Parent::setMode(Mode m) {
+		mMode = m;
+	}
+	Parent::Mode Parent::mode()const {
+		return mMode;
 	}
 	Parent::~Parent() {
 		SAFE_DELETE(mTitle);
@@ -64,10 +80,7 @@ namespace Sequence {
 		}
 		mNext = SEQ_NONE;//一旦生成了对应的类，下一帧就转移了
 		//因此要cz mNext;
-		Framework f = Framework::instance();
-		stringstream ss;
-		ss << f.frameRate();
-		f.drawDebugString(8, 8, ss.str().c_str());
+		
 		
 		
 	}

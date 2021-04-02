@@ -51,6 +51,27 @@
     <ClInclude Include="Sequence\game\game_parent.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Sequence\game\ready.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\game\pause.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\game\play.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\game\next.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\game\fail.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\game\judge.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="staticObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BomberMan.rc">
@@ -91,6 +112,27 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Sequence\game\game_parent.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\game\fail.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\game\judge.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\game\next.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\game\pause.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\game\play.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\game\ready.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\game\staticObject.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

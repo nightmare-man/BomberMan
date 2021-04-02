@@ -8,6 +8,10 @@ namespace Sequence {
 	class Pass;
 	class Parent {
 	public:
+		enum Mode {
+			M_1P,
+			M_2P
+		};
 		enum Seq {
 			SEQ_TITLE,
 			SEQ_END,
@@ -15,16 +19,25 @@ namespace Sequence {
 			SEQ_GAME,
 			SEQ_NONE
 		};
-		Parent();
-		~Parent();
+		
 		void update();
 		void moveTo(Seq next);
+		void setMode(Mode m);
+		Mode mode()const;
+		static void create();
+		static void destroy();
+		static Parent* instance();
 	private:
+		Parent();
+		Parent(Parent&);
+		~Parent();
 		Title* mTitle;
 		End* mEnd;
 		Pass* mPass;
 		Game::Parent* mGame;
 		Seq mNext;
-		int gCount;
+		Mode mMode;
+		static Parent* mInstance;
+		
 	};
 }
