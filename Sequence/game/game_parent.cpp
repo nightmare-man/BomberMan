@@ -9,9 +9,6 @@
 #include "GameLib/Framework.h"
 #include "file.h"
 #include "state.h"
-#include <sstream>
-
-using namespace std;
 using namespace GameLib;
 namespace Sequence {
 	namespace Game {
@@ -22,21 +19,19 @@ namespace Sequence {
 			mSEQ = m;
 		}
 		Parent::Parent(int level):mLevel(1),mState(0),mLife(MAX_LIFE)
-		,mStageID(1),mFail(0),mJudge(0),mNext(0),mPause(0),mPlay(0),
+		,mStageID(0),mFail(0),mJudge(0),mNext(0),mPause(0),mPlay(0),
 		mReady(0),mSEQ(SEQ_NONE){
 			mReady = new Ready();
 		}
 		void Parent::startLoading() {
-			stringstream ss;
 			switch (mode()) {
 			case M_1P:
-				ss << "data/stageData/" << mStageID << ".txt";
+				mStageID = 1;
 				break;
 			case M_2P:
-				ss << "data/stageData/fight.txt";
+				mStageID = 0;
 				break;
 			}
-			File f(ss.str().c_str());
 			mState = new State(mStageID);
 		}
 		bool Parent::isFinalStage()const {

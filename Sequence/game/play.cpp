@@ -12,30 +12,6 @@ namespace Sequence {
 		}
 		void Play::update(Parent* p) {
 			Framework f = Framework::instance();
-			int dx = 0, dy = 0;
-			if (f.isKeyTriggered('a')) {
-				dx = -1;
-			}
-			else if (f.isKeyTriggered('d')) {
-				dx = 1;
-			}
-			else if (f.isKeyTriggered('w')) {
-				dy = -1;
-			}
-			else if (f.isKeyTriggered('s')) {
-				dy = 1;
-			}
-			else if (f.isKeyTriggered(' ')) {
-				p->moveTo(Parent::SEQ_PAUSE);
-			}
-			if (p->state()->hasClear()) {
-				if (p->mode() == Parent::M_1P) {
-					p->moveTo(Parent::SEQ_NEXT);//´ýÐø
-				}
-				else {
-					p->moveTo(Parent::SEQ_JUDGE);
-				}
-			}
 #ifndef NDEBUG
 			if (f.isKeyTriggered('x')) {
 				if (p->mode() == Parent::M_1P) {

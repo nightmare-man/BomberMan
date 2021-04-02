@@ -2,6 +2,7 @@
 #include "array.h"
 class Image;
 class StaticObject;
+class DynamicObject;
 class State {
 public:
 	static const int STAGE_ID_2PLAYS = 0;
@@ -16,4 +17,6 @@ private:
 	Array2D<StaticObject> mStageObjects;
 	Image* image;//ͼƬ
 	int mStageID;
+	DynamicObject* mDynamicObjects;
+	int mDynamicObjectNumber;
 };

@@ -36,4 +36,5 @@ public:
 private:
 	unsigned mFlag;
 	static const int OBJECT_LEN = 16;
+	bool mFloor;//是否显示道具
 };
